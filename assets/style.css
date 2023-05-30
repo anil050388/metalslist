@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #192444;
+  margin: 1%;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-family:fantasy;
+  color: gold;
+}
+
+.container_first,.card_container1, .card_container3 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: column;
+  text-align: center;
+  padding-right: 15px;
+}
+
+.linechart {
+  background-color: black;
+}
+
+.goldcard, .silvercard, .platinumcard, .Palladiumcard{
+  flex-direction:column;
+  display: flex;
+  flex-wrap: wrap;
+  position:relative;
+  padding: 10px;
+  margin-right: 12px;
+  width: 100%;
+  color: white;
+}
+
+.percentage_gold, .percentage_silver, .percentage_platinum, .percentage_palladium ,.country_dropdown{
+  flex-direction:column;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.radio {
+  align-items: center;
+  text-align: center;
+  flex-direction:column;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#rowstable {
+  align-items: left;
+  text-align: left;
+}
+
+.location_name {
+  text-align: right;
+}
