@@ -49,7 +49,6 @@ platformdirs==3.5.1
 plotly==5.14.1
 prettytable==3.7.0
 pyee==8.2.2
-pypiwin32==223
 pyppeteer==1.0.2
 pyquery==2.0.0
 python-dateutil==2.8.2
