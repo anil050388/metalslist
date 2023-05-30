@@ -5,11 +5,11 @@
 import json
 
 # Opening JSON file
-f = open('data.json')
+f = open('simple.json')
 
 # returns JSON object as
 # a dictionary
-data = json.load(f).encoding="utf-8"
+data = json.load(f)
 
 # Iterating through the json
 # list
