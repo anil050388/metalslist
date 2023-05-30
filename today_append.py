@@ -17,8 +17,9 @@ def main():
 	d = {'XAU': 'Gold', 'XAG': 'Silver', 'XPT': 'Platinum', 'XPD': 'Palladium' }
 	for k in d:
 		url = f'https://api.metalpriceapi.com/v1/{currentday}?api_key={api_key}&base={k}'
-		response = requests.get(url).json()
+		response = requests.get(url)
 		if response.status_code == 200:
+			response = response.json()
 			rates = response["rates"]
 			dt_obj =  currentday
 			new_data = {dt_obj : rates}
