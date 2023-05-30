@@ -9,7 +9,7 @@ f = open('data.json')
 
 # returns JSON object as
 # a dictionary
-data = json.load(f)
+data = json.load(f).encoding="utf-8"
 
 # Iterating through the json
 # list
