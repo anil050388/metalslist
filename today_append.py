@@ -32,7 +32,7 @@ def write_json(new_data, k , filename='data.json'):
 		# First we load existing data into a dict.
 		print(new_data)
 		print(k)
-		file_data = json.load(file)
+		file_data = json.loads(file)
 		x = len(file_data[k])-1
 		# Join new_data with file_data inside emp_details
 		file_data[k][x]["rates"].update(new_data)
