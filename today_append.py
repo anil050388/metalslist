@@ -5,22 +5,26 @@ from dateutil.relativedelta import relativedelta
 import pandas as pd
 import json, requests
 from datetime import datetime , timedelta, date
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
 
-load_dotenv()
+# load_dotenv()
 # secret_token = os.getenv('secret_token')
-secret_token = os.environ['token']
+secret_token = os.environ["token"]
 api_key = secret_token
 
 
-response = requests.get(f'https://api.metalpriceapi.com/v1/2022-05-21?api_key={api_key}&base=XAU')
-  
-# print request status_code
-print(response.status_code)
+def main():
+    response = requests.get(f'https://api.metalpriceapi.com/v1/2022-05-21?api_key={api_key}&base=XAU')
+    print(response.status_code)
+    if response.status_code == 200:
+        print("Hello World")
+        print(response)
 
-
+if __name__ == '__main__':
+    main()
+    
 #function to add to JSON
 # def write_json(new_data, k , filename='data.json'):
 # 	with open(filename,'r+') as file:
