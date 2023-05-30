@@ -18,11 +18,11 @@ def main():
 	for k in d:
 		url = f'https://api.metalpriceapi.com/v1/{currentday}?api_key={api_key}&base={k}'
 		response = requests.get(url).json()
-		#today_time = response["timestamp"]
-		rates = response["rates"]
-		dt_obj =  currentday
-		new_data = {dt_obj : rates}
-		write_json(new_data,k)	
+		if response.status_code == 200:
+			rates = response["rates"]
+			dt_obj =  currentday
+			new_data = {dt_obj : rates}
+			write_json(new_data,k)	
    
 #function to add to JSON
 def write_json(new_data, k , filename='data.json'):
