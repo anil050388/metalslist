@@ -13,7 +13,8 @@ api_key = secret_token
 
 
 def main():
-	currentday = str(date.today())
+	#currentday = str(date.today())
+	currentday = '2023-05-29'
 	d = {'XAU': 'Gold', 'XAG': 'Silver', 'XPT': 'Platinum', 'XPD': 'Palladium' }
 	for k in d:
 		url = f'https://api.metalpriceapi.com/v1/{currentday}?api_key={api_key}&base={k}'
