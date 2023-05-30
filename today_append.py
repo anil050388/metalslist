@@ -18,7 +18,7 @@ def main():
 	for k in d:
 		url = f'https://api.metalpriceapi.com/v1/{currentday}?api_key={api_key}&base={k}'
 		response = requests.get(url).json()
-		today_time = response["timestamp"]
+		#today_time = response["timestamp"]
 		rates = response["rates"]
 		dt_obj =  currentday
 		new_data = {dt_obj : rates}
