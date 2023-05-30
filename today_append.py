@@ -28,11 +28,11 @@ def main():
    
 #function to add to JSON
 def write_json(new_data, k , filename='data.json'):
-	with open(filename,'r+') as file:
+	with open(filename, 'r+', encoding="utf-8") as file:
 		# First we load existing data into a dict.
 		print(new_data)
 		print(k)
-		file_data = json.loads(file)
+		file_data = json.load(file)
 		x = len(file_data[k])-1
 		# Join new_data with file_data inside emp_details
 		file_data[k][x]["rates"].update(new_data)
