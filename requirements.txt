@@ -35,7 +35,6 @@ jmespath==1.0.1
 load-dotenv==0.1.0
 lxml==4.9.2
 MarkupSafe==2.1.2
-mysqlclient==2.1.1
 npm==0.1.1
 numpy==1.24.3
 openpyxl==3.1.2
